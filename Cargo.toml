@@ -1,0 +1,20 @@
+[package]
+name = "colorcalla"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+num-traits = "0.2.17"
+three-d = { version = "0.16.3", features = ["egui-gui"] }
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+log = "0.4"
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+console_error_panic_hook = "0.1"
+console_log = "0.2"
