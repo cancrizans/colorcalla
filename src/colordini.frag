@@ -23,8 +23,8 @@ void main()
 
     poinc = rotate(poinc,rot);
 
-    vec2 DIN99 = poinc2DIN99(poinc);
-    vec2 Lab = DIN992Lab(DIN99);
+    vec2 DIN99c = poinc2DIN99c(poinc);
+    vec2 Lab = DIN99c2Lab(DIN99c);
     vec3 XYZ = Lab2XYZ(Lab);
     vec3 sRGB = XYZ2sRGB(XYZ);    
 

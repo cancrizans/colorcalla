@@ -30,8 +30,8 @@ void main()
     if(dot(poinc,poinc)>1.)
         discard;
 
-    vec2 DIN99 = poinc2DIN99(poinc);
-    vec2 ab = DIN992Lab(DIN99);
+    vec2 DIN99c = poinc2DIN99c(poinc);
+    vec2 ab = DIN99c2Lab(DIN99c);
     vec3 XYZ = Lab2XYZ(ab);
     vec3 sRGB = XYZ2sRGB(XYZ);
 

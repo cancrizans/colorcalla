@@ -82,6 +82,32 @@ vec2 DIN992Lab(vec2 d99){
 
 
 
+vec2 poinc2DIN99c(vec2 poinc){
+    float prho = sqrt(dot(poinc,poinc));
+    float geodesic_r = 2. * atanh(prho);
+    float chroma99c = hyperR * geodesic_r;
+
+    float G = (exp(chroma99c/23.0) - 1.0)/0.066;
+    float h99c = atan(poinc.y,poinc.x);
+
+    float f = G * sin(h99c);
+    float e = G * cos(h99c);
+
+    return vec2(e,f);
+}
+
+vec2 DIN99c2Lab(vec2 d99c){
+    float e = d99c.x;
+    float f = d99c.y;
+    float a_star = e;
+    float b_star = f / 0.94;
+    return vec2(a_star,b_star);
+}
+
+
+
+
+
 
 
 const float delta = 6./29.;
